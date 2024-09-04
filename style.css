@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #36393e;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sidebar {
+    width: 20%;
+    position: fixed;
+    height: 100%;
+    background-color: #282b30;
+    margin-top: 0;
+    padding: 0;
+}
+
+.sidebar a {
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.dropdown {
+    max-width: 95%;
+    margin: 10px 5px 0 5px;
+    position: relative;
+    width: 100%;
+}
+  
+.dropdown-btn {
+    width: 100%;
+    border: none;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.disconnect {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+}
+  
+.arrow {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: transform ease-in-out 0.3s;
+}
+  
+.dropdown-content {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    display: none;
+    /* visibility: hidden; */
+    transform: translateY(-1em);
+    transition: transform ease 0.3s;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content-voice {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    display: none;
+    /* visibility: hidden; */
+    transform: translateY(-1em);
+    transition: transform ease 0.3s;
+    margin: 0;
+    padding: 0;
+}
+
+.checkbox:checked ~ .dropdown-content {
+    visibility: visible;
+    display: block;
+    position: relative;
+    transform: translateY(0);
+}
+
+.checkbox-voice:checked ~ .dropdown-content-voice {
+    visibility: visible;
+    display: block;
+    position: relative;
+    transform: translateY(0);
+}
+
+.checkbox:checked + label > .arrow {
+    transform: rotate(180deg);
+}
+
+.checkbox-voice:checked + label > .arrow {
+    transform: rotate(180deg);
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-voice {
+    opacity: 0;
+    position: absolute;
+}
+  
+.dropdown-content li a {
+    display: block;
+    color: #fff;
+    /* margin: 0.1em 0; */
+    text-decoration: none;
+}
+
+.dropdown-content-voice li a {
+    display: block;
+    color: #fff;
+    /* margin: 0.1em 0; */
+    text-decoration: none;
+}
+
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    background-color: #1c1f22;
+    border-radius: 5px;
+    height: 30px;
+    width: 100%;
+    height: 3em;
+    padding: 3px 0 3px 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.online-sign {
+    background-color: #37ff77;
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 100%;
+    position: absolute;
+    left: 1.5em;
+    bottom: 0.3em;
+    z-index: 2;
+    border: solid;
+    border-color: #1c1f22;
+    border-width: 3px;
+}
+
+.profile-display {
+    margin-left:20px;
+    margin-right: 20px;
+}
+
+.profile-name {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.profile-status {
+    font-size: 10px;
+}
+
+.profile img {
+    height: 2em;
+    width:2em;
+    border-radius: 100%;
+    /* margin-right: 12px; */
+}
+
+.quick-buttons > i {
+    margin: 2px;
+    cursor: pointer;
+    /* width: 10px;
+    height: 10px; */
+}
+
+.logo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+
+.desc {
+    font-size: 12px;
+    margin: 0;
+}
+
+.channel {
+    height: 30px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.nameChannel {
+    /* margin: 8px; */
+    border-radius: 5px;
+    width: 100%;
+}
+
+.channel:hover, .channel:focus {
+    background-color: #36393e;
+}
+
+.container {
+    width: 100vw;
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    box-sizing: border-box;
+    margin-left: 20%;
+}
+
+.head-wrapper {
+    width: 100%;
+    height: 350px;
+    /* display: flex; */
+    /* justify-content: center; */
+    position: relative;
+}
+
+.head {
+    width: 350px;
+    height: 350px;
+    background-color: #7289da;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-left: 3em;
+    top: 0px;
+    align-self: center;
+    transition: ease 2s;
+    cursor: pointer;
+}
+
+.eyes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.5s;
+    animation: move 6s infinite;
+}
+
+.eye {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 25px 25px 25px 25px;
+    animation: blink 6s infinite;
+}
+
+.bubble-wrapper {
+    display: none;
+    position: absolute;
+    align-items: center;
+    width: 100vh;
+}
+
+.bubble-wrapper2 {
+    position: absolute;
+    width: 100vh;
+}
+
+.circle1 {
+    background-color: black;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 175px;
+    right: 410px;
+}
+
+.circle2 {
+    background-color: black;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 150px;
+    right: 385px;
+}
+
+.circle3 {
+    background-color: black;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 125px;
+    right: 355px;
+}
+
+.circle4 {
+    background-color: black;
+    border-radius: 100%;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 40px;
+    right: 185px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle5 {
+    background-color: black;
+    border-radius: 100%;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    top: 30px;
+    left: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hello {
+    font-size:small;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    /* top: 23px;
+    right:0px;*/
+    text-align: center; 
+}
+
+.card-wrapper {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 20px;
+    width: 100%;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    max-height: 3.5em;
+}
+
+.user-info {
+    display: flex;
+    align-items: baseline;
+    margin: 5px;
+}
+
+.user img {
+    border-radius: 100%;
+    width: 3em;
+    height: 3em;
+}
+
+.user-name {
+    font-size: 1.2em;
+    font-weight: 550;
+    margin-right: 12px;
+    color: #37ff77;
+}
+
+.message-time {
+    font-size: 1em;
+    color: gray;
+}
+
+.content-card {
+    background-color: #5e6367;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    border-radius: 10px;
+    width: 70%;
+    box-sizing: border-box;
+    transition: ease-out 2s;
+    padding: 20px;
+    margin-left: 3em;
+}
+
+.socials {
+    display: flex;
+    height: 0px;
+    justify-content: space-around;
+
+}
+
+.head:focus + .bubble-wrapper {
+    display: block; 
+}
+
+.valorant:hover {
+    background-image: url(assets/shooting-phoenix.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.R6:hover {
+    background-image: url(assets/rainbow-six-siege-jackal.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.ML:hover {
+    background-image: url(assets/mobilelegends.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.TF:hover {
+    background-image: url(assets/mobilelegends.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.LC:hover {
+    background-image: url(assets/lethal-company-dance.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes move {
+    40% {
+        transform: translate(20px, 50px);
+    }
+    60% {
+        transform: translate(60px, -30px);
+    }
+    80% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes blink {
+    0% {
+        height: 50px;
+        width: 50px;
+    }
+    15% {
+        height: 60px;
+        width: 40px;
+    }
+    20% {
+        height: 60px;
+        width: 40px;
+    }
+    60% {
+        height: 60px;
+        width: 60px;
+    }
+    70% {
+        height: 50px;
+        width: 50px;
+    }
+    85% {
+        height: 10px;
+        width: 50px;
+    }
+    90% {
+        height: 10px;
+        width: 50px;
+    }
+    100% {
+        height: 50px;
+        width: 50px;
+    }
+}
